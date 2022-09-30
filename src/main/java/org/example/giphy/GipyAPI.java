@@ -2,13 +2,11 @@ package org.example.giphy;
 
 import at.mukprojects.giphy4j.Giphy;
 import at.mukprojects.giphy4j.entity.search.SearchFeed;
-import at.mukprojects.giphy4j.entity.search.SearchGiphy;
-import at.mukprojects.giphy4j.entity.search.SearchRandom;
 import at.mukprojects.giphy4j.exception.GiphyException;
-import org.example.parameters.eToken;
+import org.example.parameters.eTokens;
 
 public class GipyAPI {
-    Giphy giphy = new Giphy(eToken.tokenKiphy.botToken);
+    Giphy giphy = new Giphy(eTokens.tokenKiphy.botToken);
 
     public String giphy () throws GiphyException {
         SearchFeed feed = giphy.search("cat", 1, 0);

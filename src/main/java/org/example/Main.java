@@ -7,7 +7,7 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import org.example.giphy.GipyAPI;
-import org.example.parameters.eToken;
+import org.example.parameters.eTokens;
 
 import javax.security.auth.login.LoginException;
 
@@ -15,7 +15,7 @@ import javax.security.auth.login.LoginException;
 public class Main extends ListenerAdapter {
     GipyAPI gipyAPI = new GipyAPI();
     public static void main(String[] args) throws LoginException {
-        JDA discordBot = JDABuilder.createDefault(eToken.tokenDiscord.botToken)
+        JDA discordBot = JDABuilder.createDefault(eTokens.tokenDiscord.botToken)
                 .addEventListeners(new Main())
                 .enableIntents(GatewayIntent.MESSAGE_CONTENT)
                 .build();
