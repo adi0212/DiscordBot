@@ -10,8 +10,6 @@ repositories {
 }
 
 dependencies {
-    //Change 'implementation' to 'compile' in old Gradle versions
-    implementation("net.dv8tion:JDA:5.0.0-alpha.20") {
-        exclude module: 'opus-java'
-    }
+    implementation("net.dv8tion:JDA:5.0.0-alpha.20")
+    implementation("at.mukprojects:giphy4j:1.0.1")
 }
