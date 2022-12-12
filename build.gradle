@@ -7,9 +7,17 @@ version '1.0.0'
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://m2.dv8tion.net/releases'
+    }
 }
 
 dependencies {
     implementation("net.dv8tion:JDA:5.0.0-alpha.20")
     implementation("at.mukprojects:giphy4j:1.0.1")
+    implementation('com.discord4j:discord4j-core:3.2.3')
+    implementation("com.sedmelluq:lavaplayer:1.3.77")
+
+    implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
 }
